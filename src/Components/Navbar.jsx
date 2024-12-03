@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/* Navigation Menu */}
         <ul
-          className={`absolute md:static top-16 right-0 w-full sm:w-[400px] md:w-auto md:flex  bg-black md:bg-transparent transition-transform duration-300 ${
+          className={`absolute md:static top-16 right-0 w-[200px] sm:w-[400px] md:w-auto md:flex  bg-black md:bg-transparent transition-transform duration-300 ${
             menuOpen ? "translate-y-0" : "translate-y-[-300px]"
           } md:translate-y-0`}
         >
