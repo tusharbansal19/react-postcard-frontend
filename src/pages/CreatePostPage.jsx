@@ -89,7 +89,7 @@ const CreatePostPage = () => {
         Create a New Post
       </h2>
 
-      <div className="p-6 pr-20 py-32 bg-white mt-7 w-[50%] text-gray-800 shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 rounded-r-3xl">
+      <div className="p-6 pr-20 py-32 bg-white mt-7 w-full md:w-[50%] text-gray-800 shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 rounded-r-3xl">
         <form onSubmit={handleSubmit} className="space-y-6 rounded-3xl">
           <div className="flex flex-col">
             <label

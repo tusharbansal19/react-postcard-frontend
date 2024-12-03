@@ -13,6 +13,11 @@ const Navbar = () => {
     { label: "Studio", icon: "🎨", path: "/studio" }, // Added Studio Page
   ];
 
+  // Close menu when an item is clicked
+  const handleMenuItemClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="fixed z-50 w-full text-white p-4 shadow-md bg-black">
       <div className="relative z-10 flex justify-between items-center">
@@ -35,7 +40,7 @@ const Navbar = () => {
 
         {/* Navigation Menu */}
         <ul
-          className={`absolute md:static top-16 left-0 w-full md:w-auto md:flex bg-black md:bg-transparent transition-transform duration-300 ${
+          className={`absolute md:static top-16 right-0 w-[400px] md:w-auto md:flex  bg-black md:bg-transparent transition-transform duration-300 ${
             menuOpen ? "translate-y-0" : "translate-y-[-300px]"
           } md:translate-y-0`}
         >
@@ -59,9 +64,10 @@ const Navbar = () => {
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className="relative z-50 px-4 py-2 text-sm flex items-center space-x-2 cursor-pointer hover:text-sky-300 transition-colors duration-300"
+              className="relative z-[60] px-4 py-2 text-sm flex items-center space-x-2 cursor-pointer hover:text-sky-300 transition-colors duration-300"
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
+              onClick={handleMenuItemClick} // Close menu when item is clicked
             >
               <Link to={item.path} className="flex items-center space-x-2">
                 <span>{item.icon}</span>
