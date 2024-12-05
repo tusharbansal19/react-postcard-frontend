@@ -36,7 +36,7 @@ const CreatePostPage = () => {
     setLoading(true);
 
     try {
-      await axios.post("https://react-postcard-1.onrender.com/api/posts", newPost, {
+      await axios.post("https://grabeats-server.onrender.com/api/posts", newPost, {
         headers: { "Content-Type": "application/json" },
       });
       toast.success("Post created successfully!", {

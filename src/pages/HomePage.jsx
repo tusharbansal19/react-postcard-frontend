@@ -20,7 +20,7 @@ const HomePage = () => {
   const fetchAllPosts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://react-postcard-1.onrender.com/api/posts'); // Replace with your API
+      const response = await axios.get('https://grabeats-server.onrender.com/api/posts'); // Replace with your API
       const posts = response.data;
 
       // Store necessary data in the new state
@@ -88,7 +88,7 @@ const HomePage = () => {
     try {
       // Fetch posts for matching IDs
       const promises = matchingPostIds.map((id) =>
-        axios.get(`https://react-postcard-1.onrender.com/api/posts/${id}`)
+        axios.get(`https://grabeats-server.onrender.com/api/posts/${id}`)
       );
       const responses = await Promise.all(promises);
 
